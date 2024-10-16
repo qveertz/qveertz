@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>>ᴗ<</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+
+            <p style="color:purple">⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘</p>
+            <h1 id="header">WELCOME TO MY SITE!</h1>
+            <p style="color:purple">⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘</p>
+            <script>
+                function zmienKolory() {
+                    const naglowek = document.getElementById('header');
+                    const tekst = naglowek.innerText;
+                    let html = '';
+            
+                    for(let i = 0; i < tekst.length; i++) {
+                        const litera = tekst[i];
+                        html += `<span style="opacity: 0;">${litera}</span>`;
+                    }
+            
+                    naglowek.innerHTML = html;
+            
+                    const litery = naglowek.getElementsByTagName('span');
+                    let index = 0;
+            
+                    function zmienKolor() {
+                        if (index < litery.length) {
+                            litery[index].style.opacity = '1';
+                            litery[index].style.color = 'purple';
+                            index++;
+                            setTimeout(zmienKolor, 200);
+                        } else {
+                  
+                            index = 0;
+                            setTimeout(zmienKolory, 5000); 
+                        }
+                    }
+            
+                    zmienKolor(); 
+                }
+            
+                window.onload = zmienKolory;
+            </script>
+            
+        </div>
+        <div class="main"></div>
+        <div class="aside"></div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
